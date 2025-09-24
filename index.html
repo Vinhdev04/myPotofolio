@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Phạm Công Vinh - Frontend Developer</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/animation.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Vinhdev</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/cv.html">CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero"
+      style="
+        position: relative;
+        min-height: 520px;
+        background: linear-gradient(120deg, #e0e7ff 0%, #f0f4ff 100%);
+        overflow: hidden;
+      "
+    >
+      <div class="container py-5">
+        <div
+          class="row align-items-center justify-content-center flex-lg-row flex-column-reverse"
+        >
+          <div
+            class="col-lg-6 hero-content text-center text-lg-start d-flex flex-column justify-content-center"
+          >
+            <h1 class="fw-bold mb-2" style="font-size: 2.7rem">
+              Hi, I'm <span class="highlight">Công Vinh</span>
+            </h1>
+            <div
+              class="typing-effect mb-3"
+              style="font-size: 1.35rem; color: #2563eb; font-weight: 500"
+            ></div>
+            <p class="lead mb-4" style="color: #444">
+              Frontend Developer & UI/UX Designer crafting beautiful digital
+              experiences with cutting-edge technologies
+            </p>
+            <div class="hero-buttons d-flex gap-3 flex-wrap">
+              <a href="#projects" class="btn-primary-custom">View My Project</a>
+              <a href="./assets/cv/myCV.pdf" class="btn-outline-custom"
+                >Download CV</a
+              >
+            </div>
+          </div>
+          <div
+            class="col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0"
+          >
+            <div class="avatar-border-anim mb-3" style="position: relative">
+              <div class="avatar-border"></div>
+              <img
+                src="./assets/images/myAvy.jpg"
+                alt="Avatar"
+                class="avatar-img"
+                style="
+                  width: 180px;
+                  height: 180px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  position: relative;
+                  z-index: 2;
+                  border: 6px solid #fff;
+                  box-shadow: 0 4px 32px #2563eb33;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bg-anim"></div>
+      <style>
+        .avatar-border-anim {
+          display: inline-block;
+          position: relative;
+        }
+        .avatar-border {
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          border: 5px dashed #2563eb;
+          box-shadow: 0 4px 24px #2563eb22;
+          z-index: 1;
+          animation: border-rotate 2.5s linear infinite;
+        }
+        @keyframes border-rotate {
+          0% {
+            border-color: #2563eb;
+            transform: rotate(0deg);
+          }
+          50% {
+            border-color: #60a5fa;
+          }
+          100% {
+            border-color: #2563eb;
+            transform: rotate(360deg);
+          }
+        }
+        .avatar-img {
+          border-radius: 50%;
+          box-shadow: 0 2px 16px #2563eb22;
+          transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .avatar-img:hover {
+          box-shadow: 0 8px 32px #2563eb55;
+          transform: scale(1.04);
+        }
+        .typing-effect {
+          min-height: 32px;
+          border-right: 2px solid #2563eb;
+          white-space: nowrap;
+          overflow: hidden;
+          display: inline-block;
+          background: linear-gradient(90deg, #e0e7ff 80%, #f0f4ff 100%);
+          padding: 0 6px;
+        }
+        .hero-buttons .btn-primary-custom,
+        .hero-buttons .btn-outline-custom {
+          font-size: 1.1rem;
+          padding: 0.7em 2em;
+          border-radius: 30px;
+          box-shadow: 0 2px 8px #2563eb22;
+          transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .hero-buttons .btn-primary-custom {
+          background: #2563eb;
+          color: #fff;
+          border: none;
+        }
+        .hero-buttons .btn-primary-custom:hover {
+          background: #1746a0;
+          color: #fff;
+          box-shadow: 0 4px 16px #2563eb44;
+        }
+        .hero-buttons .btn-outline-custom {
+          background: #fff;
+          color: #2563eb;
+          border: 2px solid #2563eb;
+        }
+        .hero-buttons .btn-outline-custom:hover {
+          background: #2563eb;
+          color: #fff;
+          box-shadow: 0 4px 16px #2563eb44;
+        }
+        .hero-bg-anim {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          z-index: 0;
+          pointer-events: none;
+          background: radial-gradient(
+              circle at 70% 30%,
+              #2563eb22 0%,
+              #e0e7ff00 70%
+            ),
+            radial-gradient(circle at 20% 80%, #60a5fa22 0%, #f0f4ff00 70%);
+        }
+        @media (max-width: 991px) {
+          .avatar-border,
+          .avatar-img {
+            width: 140px !important;
+            height: 140px !important;
+          }
+          .avatar-border {
+            top: -8px;
+            left: -8px;
+            width: 156px !important;
+            height: 156px !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .hero-content h1 {
+            font-size: 2rem !important;
+          }
+          .typing-effect {
+            font-size: 1rem !important;
+          }
+        }
+      </style>
+      <script>
+        // Typing effect
+        document.addEventListener("DOMContentLoaded", function () {
+          var el = document.querySelector(".typing-effect");
+          var texts = [
+            "Turning ideas into beautiful code...",
+            "Passionate about UI/UX and frontend.",
+            "Let's build something amazing together!",
+          ];
+          var idx = 0,
+            charIdx = 0,
+            typing = true;
+          function type() {
+            if (!el) return;
+            if (typing) {
+              if (charIdx < texts[idx].length) {
+                el.textContent = texts[idx].slice(0, charIdx + 1);
+                charIdx++;
+                setTimeout(type, 55);
+              } else {
+                typing = false;
+                setTimeout(type, 1200);
+              }
+            } else {
+              if (charIdx > 0) {
+                el.textContent = texts[idx].slice(0, charIdx - 1);
+                charIdx--;
+                setTimeout(type, 30);
+              } else {
+                typing = true;
+                idx = (idx + 1) % texts.length;
+                setTimeout(type, 400);
+              }
+            }
+          }
+          type();
+        });
+      </script>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-3" style="font-size:2.5rem;">About Me</h2>
+        <p class="text-center mb-4" style="font-size:1.2rem;color:#555;">Passionate developer with 5+ years of experience creating innovative web solutions</p>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-5 d-flex justify-content-center mb-4 mb-lg-0">
+            <div class="about-avatar-box">
+              <img src="./assets/images/myAvy.jpg" alt="Avatar" class="about-avatar-img">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="about-desc mb-4">
+              <p class="fs-5 mb-3">I'm a passionate full-stack developer with expertise in modern web technologies. I love creating user-centric applications that solve real-world problems and deliver exceptional user experiences.</p>
+              <div class="about-skills-anim mb-4">
+                <span class="about-skill-icon html"><i class="fab fa-html5"></i></span>
+                <span class="about-skill-icon css"><i class="fab fa-css3-alt"></i></span>
+                <span class="about-skill-icon js"><i class="fab fa-js-square"></i></span>
+                <span class="about-skill-icon react"><i class="fab fa-react"></i></span>
+                <span class="about-skill-icon node"><i class="fab fa-node-js"></i></span>
+                <span class="about-skill-icon python"><i class="fab fa-python"></i></span>
+                <span class="about-skill-icon figma"><i class="fab fa-figma"></i></span>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="about-feature-card">
+                    <span class="about-feature-icon"><i class="fas fa-code"></i></span>
+                    <h5 class="fw-bold mb-1">Frontend Development</h5>
+                    <p class="mb-0">React, Vue, Angular, TypeScript</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-feature-card">
+                    <span class="about-feature-icon"><i class="fas fa-server"></i></span>
+                    <h5 class="fw-bold mb-1">Backend Development</h5>
+                    <p class="mb-0">Node.js, Python, PostgreSQL</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-feature-card">
+                    <span class="about-feature-icon"><i class="fas fa-pencil-ruler"></i></span>
+                    <h5 class="fw-bold mb-1">UI/UX Design</h5>
+                    <p class="mb-0">Figma, Adobe XD, Sketch</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-feature-card">
+                    <span class="about-feature-icon"><i class="fas fa-mobile-alt"></i></span>
+                    <h5 class="fw-bold mb-1">Mobile Development</h5>
+                    <p class="mb-0">React Native, Flutter</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .about-section {
+          background: #f8fafc;
+        }
+        .about-avatar-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 320px;
+        }
+        .about-avatar-img {
+          width: 240px;
+          height: 320px;
+          object-fit: cover;
+          border-radius: 24px;
+          box-shadow: 0 8px 32px #2563eb22;
+          border: 6px solid #fff;
+          transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .about-avatar-img:hover {
+          box-shadow: 0 16px 48px #2563eb44;
+          transform: scale(1.03);
+        }
+        .about-desc {
+          color: #222;
+        }
+        .about-skills-anim {
+          display: flex;
+          gap: 18px;
+          margin-bottom: 18px;
+          overflow-x: auto;
+          padding-bottom: 8px;
+        }
+        .about-skill-icon {
+          font-size: 2.2rem;
+          padding: 10px 18px;
+          border-radius: 16px;
+          background: #fff;
+          box-shadow: 0 2px 8px #2563eb22;
+          animation: skill-move 2.5s infinite alternate;
+        }
+        .about-skill-icon.html { color: #e34c26; animation-delay: 0s; }
+        .about-skill-icon.css { color: #2965f1; animation-delay: 0.2s; }
+        .about-skill-icon.js { color: #f7df1e; animation-delay: 0.4s; }
+        .about-skill-icon.react { color: #61dafb; animation-delay: 0.6s; }
+        .about-skill-icon.node { color: #68a063; animation-delay: 0.8s; }
+        .about-skill-icon.python { color: #3776ab; animation-delay: 1s; }
+        .about-skill-icon.figma { color: #a259ff; animation-delay: 1.2s; }
+        @keyframes skill-move {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(24px); }
+        }
+        .about-feature-card {
+          background: #fff;
+          border-radius: 18px;
+          box-shadow: 0 2px 12px #2563eb18;
+          padding: 1.2rem 1.4rem;
+          margin-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .about-feature-card:hover {
+          box-shadow: 0 8px 32px #2563eb33;
+          transform: scale(1.03);
+        }
+        .about-feature-icon {
+          font-size: 2rem;
+          margin-bottom: 8px;
+          color: #2563eb;
+        }
+        @media (max-width: 991px) {
+          .about-avatar-img {
+            width: 180px;
+            height: 220px;
+          }
+          .about-avatar-box {
+            height: 220px;
+          }
+        }
+        @media (max-width: 767px) {
+          .about-section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+          }
+          .about-avatar-img {
+            width: 120px;
+            height: 160px;
+          }
+          .about-avatar-box {
+            height: 160px;
+          }
+        }
+      </style>
+    </section>
+    <section id="skills" class="skills-section" style="background: #fafbfc">
+      <div class="container py-5">
+        <h2 class="text-center fw-bold mb-2" style="font-size: 2.5rem">
+          Skills & Expertise
+        </h2>
+        <p class="text-center mb-5" style="font-size: 1.2rem; color: #555">
+          Technologies and tools I use to bring ideas to life
+        </p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 d-flex">
+            <div
+              class="card shadow-sm rounded-4 p-4 mb-0 flex-fill"
+              style="min-width: 340px"
+            >
+              <h3 class="fw-bold mb-4">
+                <i class="fas fa-tools me-2 text-primary"></i>Technical Skills
+              </h3>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span
+                    ><i class="fab fa-js-square text-warning me-2"></i
+                    >JavaScript</span
+                  ><span>95%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div class="progress-bar bg-warning" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span
+                    ><i class="fab fa-ts-square text-primary me-2"></i
+                    >TypeScript</span
+                  ><span>90%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div class="progress-bar bg-primary" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span><i class="fab fa-react text-info me-2"></i>React</span
+                  ><span>95%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div class="progress-bar bg-info" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span
+                    ><i class="fab fa-node-js text-success me-2"></i
+                    >Node.js</span
+                  ><span>88%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div class="progress-bar bg-success" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span
+                    ><i class="fab fa-python text-primary me-2"></i>Python</span
+                  ><span>85%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div class="progress-bar bg-primary" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span
+                    ><i class="fas fa-database text-purple me-2"></i
+                    >PostgreSQL</span
+                  ><span>82%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div
+                    class="progress-bar"
+                    style="width: 82%; background: #7c3aed"
+                  ></div>
+                </div>
+              </div>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span
+                    ><i class="fas fa-leaf text-success me-2"></i>MongoDB</span
+                  ><span>80%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div class="progress-bar bg-success" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="mb-3 skill-hover">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span><i class="fab fa-aws text-warning me-2"></i>AWS</span
+                  ><span>75%</span>
+                </div>
+                <div class="progress skill-bar">
+                  <div
+                    class="progress-bar"
+                    style="width: 75%; background: #ff9900"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex">
+            <div
+              class="card shadow-sm rounded-4 p-4 mb-0 flex-fill"
+              style="min-width: 340px"
+            >
+              <h3 class="fw-bold mb-4">
+                <i class="fas fa-cogs me-2 text-primary"></i>Tools &
+                Technologies
+              </h3>
+              <div class="row g-2 mb-4">
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fas fa-code text-primary me-2"></i>VS Code</span
+                  >
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fab fa-git-alt text-danger me-2"></i>Git</span
+                  >
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fab fa-docker text-info me-2"></i>Docker</span
+                  >
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fab fa-figma text-warning me-2"></i>Figma</span
+                  >
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fas fa-mail-bulk text-success me-2"></i
+                    >Postman</span
+                  >
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fas fa-vial text-secondary me-2"></i>Jest</span
+                  >
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fab fa-webpack text-info me-2"></i>Webpack</span
+                  >
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"
+                    ><i class="fab fa-linux text-dark me-2"></i>Linux</span
+                  >
+                </div>
+              </div>
+              <h4 class="fw-bold mb-3">
+                <i class="fas fa-certificate me-2 text-warning"></i
+                >Certifications
+              </h4>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="fas fa-award text-warning me-2"></i>AWS Certified
+                  Solutions Architect
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-award text-warning me-2"></i>Google Cloud
+                  Professional Developer
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-award text-warning me-2"></i>React Advanced
+                  Certification
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .skill-hover .skill-bar .progress-bar {
+          transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .skill-hover:hover .skill-bar .progress-bar {
+          box-shadow: 0 0 12px 2px #0d6efd44;
+          transform: scaleY(1.3);
+        }
+        .card.flex-fill {
+          min-width: 340px;
+          width: 100%;
+        }
+        .text-purple {
+          color: #7c3aed;
+        }
+        .text-orange {
+          color: #ff9900;
+        }
+      </style>
+    </section>
+
+    <!-- Education Section -->
+    <section
+      id="education"
+      class="education-section"
+      style="background: #fafbfc"
+    >
+      <div class="container py-5">
+        <h2 class="text-center fw-bold mb-2" style="font-size: 2.5rem">
+          Education
+        </h2>
+        <p class="text-center mb-5" style="font-size: 1.2rem; color: #555">
+          Academic journey and achievements that shaped my expertise
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="timeline position-relative" style="padding-left: 40px">
+              <div
+                class="timeline-line position-absolute"
+                style="
+                  left: 18px;
+                  top: 48px;
+                  width: 6px;
+                  height: calc(100% - 48px);
+                  background: #2563eb;
+                  border-radius: 3px;
+                "
+              ></div>
+              <!-- Master -->
+              <div
+                class="timeline-card card mb-5 p-4 position-relative"
+                style="
+                  margin-left: 0px;
+                  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.1);
+                  border-radius: 20px;
+                "
+              >
+                <span
+                  class="timeline-dot position-absolute"
+                  style="
+                    left: -30px;
+                    top: 32px;
+                    width: 20px;
+                    height: 20px;
+                    background: #fff;
+                    border: 6px solid #2563eb;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 8px #2563eb22;
+                  "
+                ></span>
+                <div
+                  class="d-flex justify-content-between align-items-start mb-2"
+                >
+                  <div>
+                    <h3 class="fw-bold mb-1">Master of Computer Science</h3>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none fw-semibold"
+                      ><i class="fas fa-university me-2"></i>Stanford
+                      University</a
+                    >
+                    <div class="text-muted">
+                      <i class="fas fa-map-marker-alt me-1"></i>California, USA
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span
+                      class="badge bg-primary bg-opacity-10 text-primary fs-6 px-3 py-2"
+                      style="border-radius: 12px"
+                      >2018 - 2020</span
+                    >
+                    <div class="fw-bold text-success mt-2">GPA: 3.9/4.0</div>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  Specialized in Software Engineering and Machine Learning.
+                  Completed thesis on 'Advanced Web Application Architecture'.
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-2">
+                    <i class="fas fa-trophy text-warning me-2"></i>Key
+                    Achievements
+                  </h6>
+                  <ul class="mb-0 ps-3">
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >Dean's List for 4 consecutive semesters
+                    </li>
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >Outstanding Graduate Student Award
+                    </li>
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >Published 2 research papers
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Bachelor -->
+              <div
+                class="timeline-card card mb-5 p-4 position-relative"
+                style="
+                  margin-left: 0px;
+                  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.1);
+                  border-radius: 20px;
+                "
+              >
+                <span
+                  class="timeline-dot position-absolute"
+                  style="
+                    left: -30px;
+                    top: 32px;
+                    width: 20px;
+                    height: 20px;
+                    background: #fff;
+                    border: 6px solid #2563eb;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 8px #2563eb22;
+                  "
+                ></span>
+                <div
+                  class="d-flex justify-content-between align-items-start mb-2"
+                >
+                  <div>
+                    <h3 class="fw-bold mb-1">
+                      Bachelor of Software Engineering
+                    </h3>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none fw-semibold"
+                      ><i class="fas fa-university me-2"></i>University of
+                      California, Berkeley</a
+                    >
+                    <div class="text-muted">
+                      <i class="fas fa-map-marker-alt me-1"></i>California, USA
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span
+                      class="badge bg-primary bg-opacity-10 text-primary fs-6 px-3 py-2"
+                      style="border-radius: 12px"
+                      >2014 - 2018</span
+                    >
+                    <div class="fw-bold text-success mt-2">GPA: 3.8/4.0</div>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  Comprehensive study of software development, algorithms, and
+                  system design. Active member of Computer Science Society.
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-2">
+                    <i class="fas fa-trophy text-warning me-2"></i>Key
+                    Achievements
+                  </h6>
+                  <ul class="mb-0 ps-3">
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >Magna Cum Laude
+                    </li>
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >President of Programming Club
+                    </li>
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >1st place in University Hackathon 2017
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- High School -->
+              <div
+                class="timeline-card card mb-5 p-4 position-relative"
+                style="
+                  margin-left: 0px;
+                  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.1);
+                  border-radius: 20px;
+                "
+              >
+                <span
+                  class="timeline-dot position-absolute"
+                  style="
+                    left: -30px;
+                    top: 32px;
+                    width: 20px;
+                    height: 20px;
+                    background: #fff;
+                    border: 6px solid #2563eb;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 8px #2563eb22;
+                  "
+                ></span>
+                <div
+                  class="d-flex justify-content-between align-items-start mb-2"
+                >
+                  <div>
+                    <h3 class="fw-bold mb-1">High School Diploma</h3>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none fw-semibold"
+                      ><i class="fas fa-school me-2"></i>Lincoln High School</a
+                    >
+                    <div class="text-muted">
+                      <i class="fas fa-map-marker-alt me-1"></i>California, USA
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span
+                      class="badge bg-primary bg-opacity-10 text-primary fs-6 px-3 py-2"
+                      style="border-radius: 12px"
+                      >2010 - 2014</span
+                    >
+                    <div class="fw-bold text-success mt-2">GPA: 4.0/4.0</div>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  Graduated with honors, active member of Math Club and Science
+                  Society.
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-2">
+                    <i class="fas fa-trophy text-warning me-2"></i>Key
+                    Achievements
+                  </h6>
+                  <ul class="mb-0 ps-3">
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >Math Olympiad Finalist
+                    </li>
+                    <li class="mb-1">
+                      <i
+                        class="fas fa-circle text-primary me-2"
+                        style="font-size: 0.6rem"
+                      ></i
+                      >Science Fair Winner
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .timeline-line {
+          z-index: 0;
+        }
+        .timeline-dot {
+          z-index: 1;
+          transition: box-shadow 0.3s;
+        }
+        .timeline-card {
+          z-index: 2;
+          background: #fff;
+          border: 1.5px solid #e0e7ef;
+        }
+        .timeline-card:hover {
+          box-shadow: 0 8px 32px rgba(37, 99, 235, 0.18);
+          transform: translateY(-2px) scale(1.01);
+          transition: box-shadow 0.3s, transform 0.3s;
+          border-color: #2563eb33;
+        }
+      </style>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Featured Projects</h2>
+        <p class="section-subtitle fade-in">
+          A showcase of my recent work and creative solutions
+        </p>
+
+        <div class="project-filters fade-in">
+          <button class="filter-btn active" data-filter="all">
+            All Projects (6)
+          </button>
+          <button class="filter-btn" data-filter="web">Web Apps (3)</button>
+          <button class="filter-btn" data-filter="mobile">
+            Mobile Apps (2)
+          </button>
+          <button class="filter-btn" data-filter="ai">AI Projects (1)</button>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card fade-in" data-category="web">
+            <img class="project-image" 
+                src="/assets/images/Stone-Paper-Scissors.png"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Stone-Paper-Scissors</h3>
+              <p class="project-description">
+                Đây là trò chơi Oẳn Tù Tì được xây dựng bằng HTML, CSS và
+                JavaScript. Người chơi sẽ thi đấu với máy tính với các lựa chọn:
+                🗿 Stone, 📄 Paper, ✂️ Scissors.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a
+                  href="https://vinhdev04.github.io/Stone-Paper-Scissors/"
+                  class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a
+                  href="https://github.com/Vinhdev04/Stone-Paper-Scissors"
+                  class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card fade-in" data-category="mobile">
+            <img class="project-image"  width="100%"
+                src="/assets/images/tic-tac-toe-js.png"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Tic-Tac-Toe-js</h3>
+              <p class="project-description">
+                Đây là trò chơi Tic-Tac-Toe (Caro 3x3) được xây dựng bằng HTML,
+                CSS và JavaScript. Người chơi có thể thi đấu 1 vs 1 hoặc chơi
+                với máy (AI). AI sử dụng thuật toán Minimax để đưa ra nước đi
+                tối ưu, đảm bảo chơi "thông minh" và khó bị đánh bại.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a
+                  href="https://vinhdev04.github.io/tic-tac-toe-js/"
+                  class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a
+                  href="https://github.com/Vinhdev04/tic-tac-toe-js"
+                  class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card fade-in" data-category="ai">
+            <img class="project-image" 
+                src="/assets/images/weather-app.png"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Weather App</h3>
+              <p class="project-description">
+               Đây là một ứng dụng thời tiết đơn giảnđược xây dựng bằng HTML, CSS và JavaScript. Người dùng có thể nhập tên thành phố để xem thông tin thời tiết thời gian thực như nhiệt độ, độ ẩm, tốc độ gió và trạng thái thời tiết.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://vinhdev04.github.io/weather-app/" class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a href="https://github.com/Vinhdev04/weather-app" class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+           <div class="project-card fade-in" data-category="ai">
+
+            <img class="project-image" 
+                src="/assets/images/potofolio1.png"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Potofolio 01</h3>
+              <p class="project-description">
+               Một trang web Portfolio cá nhân được thiết kế theo phong cách hiện đại, phù hợp với một Frontend Developer. Dự án sử dụng HTML, CSS, JavaScript và Bootstrap, mang giao diện tối kết hợp với hiệu ứng mượt mà và nút gradient bắt mắt.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://potofolio-vaniiz-it.vercel.app/" class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a href="https://github.com/Vinhdev04/potofolio-vaniizIT" class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          
+        </div> <div class="project-card fade-in" data-category="ai">
+            <img class="project-image" width="100%"
+                src="/assets/images/mancity.png"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Mancity Website</h3>
+              <p class="project-description">
+           Website của Manchester City với giao diện năng động, nổi bật hình ảnh đội ngũ cầu thủ và huấn luyện viên trong trang phục xanh đặc trưng. Trang chủ có menu điều hướng rõ ràng (Home, News, Video, Tickets, Shop, Players, Club)
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://man-city-web-navy.vercel.app/" class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a href="https://github.com/Vinhdev04/ManCity-Web" class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div> 
+          <div class="project-card fade-in" data-category="ai">
+            <img class="project-image" 
+                src="/assets/images/ecommer-fashion.png" width="100%"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Ecommerce Fashion</h3>
+              <p class="project-description">
+            Website "FOREVER" với giao diện frontend tối giản, nổi bật phần "Latest Arrivals" hiển thị các sản phẩm thời trang (áo, quần) kèm giá $39. Giao diện có menu điều hướng (Home, Collection, About, Contact, Admin Page)
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://vinhdev04.github.io/Ecommerce_Fashion/" class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a href="https://github.com/Vinhdev04/Ecommerce_Fashion" class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card fade-in" data-category="ai">
+            <img class="project-image" 
+                src="/assets/images/ecommer-fashion.png" width="100%"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Ecommerce Fashion</h3>
+              <p class="project-description">
+            Website "FOREVER" với giao diện frontend tối giản, nổi bật phần "Latest Arrivals" hiển thị các sản phẩm thời trang (áo, quần) kèm giá $39. Giao diện có menu điều hướng (Home, Collection, About, Contact, Admin Page)
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://vinhdev04.github.io/Ecommerce_Fashion/" class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a href="https://github.com/Vinhdev04/Ecommerce_Fashion" class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div>  <div class="project-card fade-in" data-category="ai">
+            <img class="project-image" 
+                src="/assets/images/ecommer-fashion.png" width="100%"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Ecommerce Fashion</h3>
+              <p class="project-description">
+            Website "FOREVER" với giao diện frontend tối giản, nổi bật phần "Latest Arrivals" hiển thị các sản phẩm thời trang (áo, quần) kèm giá $39. Giao diện có menu điều hướng (Home, Collection, About, Contact, Admin Page)
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://vinhdev04.github.io/Ecommerce_Fashion/" class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a href="https://github.com/Vinhdev04/Ecommerce_Fashion" class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div>  <div class="project-card fade-in" data-category="ai">
+            <img class="project-image" 
+                src="/assets/images/ecommer-fashion.png" width="100%"
+                alt="">
+            
+            </img>
+            <div class="project-content">
+              <h3 class="project-title">Ecommerce Fashion</h3>
+              <p class="project-description">
+            Website "FOREVER" với giao diện frontend tối giản, nổi bật phần "Latest Arrivals" hiển thị các sản phẩm thời trang (áo, quần) kèm giá $39. Giao diện có menu điều hướng (Home, Collection, About, Contact, Admin Page)
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">BOOTSTRAP</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://vinhdev04.github.io/Ecommerce_Fashion/" class="project-btn btn-demo"
+                  ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                >
+                <a href="https://github.com/Vinhdev04/Ecommerce_Fashion" class="project-btn btn-code"
+                  ><i class="fab fa-github me-2"></i>Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <p class="section-subtitle fade-in">Let's discuss your next project</p>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="contact-form fade-in">
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn-primary-custom">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2024 Vinhdev04. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-end">
+            <div class="social-links">
+              <a href="mailto:vaniizit@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+              <a href="https://github.com/Vinhdev04" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.facebook.com/i.padygamy1210" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fits_me_vinh%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExQ2Y4QVVId1JmSFI1MnJragEe7sZrUWZmFlJ9k2yhTUO1RS8cP6389PS0K1W--CspP6iOJSf4TtyPoAIG8Y4_aem_WPFCfkYQTdDU7HrVKcW5UQ&h=AT0FupbDdUovmp27kCsFZMB5Fi5RBeHxmZlH9o2kfCXFLw5RAQEa_z-gY1Hv-GBWNAjMLjGGtpCVJCSxCkoAgn5DxYls8IkNq-ktGJLOxTCarJat7MFKOc_c68iC13TrwVS4" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

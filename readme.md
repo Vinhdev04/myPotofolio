@@ -79,8 +79,8 @@
 
 ### 🔗 Link Preview
 
-- Github: [Đang cập nhật]
-- Vercel: [Đang cập nhật]
+- Github: https://github.com/Vinhdev04/myPotofolio
+- Vercel: https://my-potofolio-ten.vercel.app/
 
 ---
 
