@@ -17,39 +17,98 @@
     <link rel="stylesheet" href="../assets/css/style.css" /> -->
     <link rel="stylesheet" href="../assets/css/cv.css" />
     <style>
-      .cv-container .contact-link {
-        color: #007bff;
-        font-weight: 500;
-        text-decoration: underline;
-        transition: color 0.2s, text-decoration 0.2s;
-      }
-      .cv-container .contact-link:hover {
-        color: #0056b3;
-        text-decoration: underline wavy;
-      }
       body {
         background: url("../assets/images/bg-home.png") no-repeat center center
           fixed;
         background-size: cover;
       }
       .cv-container {
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 10px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1);
         margin: 40px auto;
         max-width: 900px;
-        padding: 40px;
+        padding: 48px 36px;
         animation: fadeInUp 1s;
+      }
+      .cv-header {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .cv-header h2 {
+        font-weight: bold;
+        font-size: 2.2rem;
+        color: #2563eb;
+        margin-bottom: 6px;
+        letter-spacing: 1px;
+      }
+      .cv-header .cv-role {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+      }
+      .cv-header .cv-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+      .cv-header .cv-contact span,
+      .cv-header .cv-contact a {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .cv-header .cv-contact i {
+        font-size: 1.1rem;
+        color: #2563eb;
+      }
+      .cv-header .cv-contact .contact-link {
+        color: #2563eb;
+        font-weight: 500;
+        text-decoration: underline;
+        transition: color 0.2s, text-decoration 0.2s;
+      }
+      .cv-header .cv-contact .contact-link:hover {
+        color: #1746a0;
+        text-decoration: underline wavy;
       }
       .section-title {
         font-weight: bold;
-        font-size: 1.3rem;
-        border-bottom: 2px solid #333;
-        margin-bottom: 20px;
-        padding-bottom: 5px;
+        font-size: 1.15rem;
+        border-left: 4px solid #2563eb;
+        padding-left: 10px;
+        margin-bottom: 18px;
+        color: #1746a0;
+        background: linear-gradient(90deg, #e0e7ff 60%, #fff 100%);
+        border-bottom: none;
       }
       .project-title {
         font-weight: 600;
+        color: #2563eb;
+        font-size: 1.08rem;
+      }
+      .cv-card {
+        background: #f8fafc;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #2563eb18;
+        padding: 1.2rem 1.4rem;
+        margin-bottom: 18px;
+        transition: box-shadow 0.3s, transform 0.3s;
+      }
+      .cv-card:hover {
+        box-shadow: 0 8px 32px #2563eb33;
+        transform: scale(1.02);
+      }
+      .table-bordered th,
+      .table-bordered td {
+        background: #fff;
+      }
+      ul {
+        margin-bottom: 0;
       }
       @keyframes fadeInUp {
         0% {
@@ -74,27 +133,22 @@
           ← Quay về trang chủ
         </a>
       </div>
-      <div class="text-center mb-2">
-        <h2 style="font-weight: bold">Phạm Công Vinh</h2>
-        <div style="font-size: 1.2rem; font-weight: 600">
-          Intern Frontend Developer
-        </div>
-        <div
-          class="d-flex justify-content-center align-items-center flex-wrap mt-2"
-          style="gap: 18px; font-size: 1rem"
-        >
+      <div class="cv-header">
+        <h2>Phạm Công Vinh</h2>
+        <div class="cv-role">Intern Frontend Developer</div>
+        <div class="cv-contact">
           <span
-            >📞
+            ><i class="fas fa-phone"></i>
             <a href="tel:0352032375" class="contact-link">0352032375</a></span
           >
           <span
-            >✉️
+            ><i class="fas fa-envelope"></i>
             <a href="mailto:vanizit@gmail.com" class="contact-link"
               >vanizit@gmail.com</a
             ></span
           >
           <span
-            >🌐
+            ><i class="fab fa-github"></i>
             <a
               href="https://github.com/Vinhdev04"
               target="_blank"
@@ -102,13 +156,11 @@
               >github.com/Vinhdev04</a
             ></span
           >
-          <span>📍 Thủ Đức,HCM</span>
+          <span><i class="fas fa-map-marker-alt"></i> Thủ Đức, HCM</span>
         </div>
       </div>
-      <div class="mb-3">
-        <div class="section-title" style="margin-bottom: 10px">
-          CAREER OBJECTIVE
-        </div>
+      <div class="cv-card">
+        <div class="section-title">CAREER OBJECTIVE</div>
         <div style="font-size: 1rem">
           I'm a passionate Frontend Developer with experience in Javascript,
           ReactJS and NodeJS. I enjoy solving problems and improving my skills.
@@ -119,46 +171,51 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="section-title">TECHNICAL SKILLS</div>
-          <ul>
-            <li>
-              <b>Languages & Libraries:</b> HTML5, CSS3, JavaScript (ES6+),
-              Responsive UI
-            </li>
-            <li><b>Frameworks/Libraries:</b> ReactJS, NodeJS</li>
-            <li>
-              <b>CSS Preprocessors/Frameworks:</b> SCSS/SASS, Tailwind CSS,
-              Bootstrap, Material UI
-            </li>
-            <li><b>State Management:</b> Redux Toolkit</li>
-            <li><b>Database:</b> Firebase, MongoDB</li>
-            <li>
-              <b>Other Technologies:</b> APIs (RESTful APIs), Git/Github, Figma
-            </li>
-          </ul>
+          <div class="cv-card">
+            <div class="section-title">TECHNICAL SKILLS</div>
+            <ul>
+              <li>
+                <b>Languages & Libraries:</b> HTML5, CSS3, JavaScript (ES6+),
+                Responsive UI
+              </li>
+              <li><b>Frameworks/Libraries:</b> ReactJS, NodeJS</li>
+              <li>
+                <b>CSS Preprocessors/Frameworks:</b> SCSS/SASS, Tailwind CSS,
+                Bootstrap, Material UI
+              </li>
+              <li><b>State Management:</b> Redux Toolkit</li>
+              <li><b>Database:</b> Firebase, MongoDB</li>
+              <li>
+                <b>Other Technologies:</b> APIs (RESTful APIs), Git/Github,
+                Figma
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-md-6">
-          <div class="section-title">KỸ NĂNG</div>
-          <table class="table table-bordered align-middle mb-0">
-            <tbody>
-              <tr>
-                <th scope="row" style="width: 30%">English:</th>
-                <td>Read docs, Basic communication</td>
-              </tr>
-              <tr>
-                <th scope="row">Soft skill</th>
-                <td>Team-worked, collaboration</td>
-              </tr>
-              <tr>
-                <th scope="row">Additional skills</th>
-                <td>Agile-Scrum, Trello</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="cv-card">
+            <div class="section-title">KỸ NĂNG</div>
+            <table class="table table-bordered align-middle mb-0">
+              <tbody>
+                <tr>
+                  <th scope="row" style="width: 30%">English:</th>
+                  <td>Read docs, Basic communication</td>
+                </tr>
+                <tr>
+                  <th scope="row">Soft skill</th>
+                  <td>Team-worked, collaboration</td>
+                </tr>
+                <tr>
+                  <th scope="row">Additional skills</th>
+                  <td>Agile-Scrum, Trello</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class="section-title mt-4">PROJECTS</div>
-      <div class="mb-3" style="border-bottom: 1px solid #333">
+      <div class="cv-card">
         <div class="project-title">
           Công ty TNHH MTV SVT <span class="float-end">2021 - 2024</span>
         </div>
@@ -171,7 +228,7 @@
           <li>Live Demo: <a href="#">Link</a></li>
         </ul>
       </div>
-      <div class="mb-3" style="border-bottom: 1px solid #333">
+      <div class="cv-card">
         <div class="project-title">
           Công ty CP Công nghệ NDS <span class="float-end">2019 - 2021</span>
         </div>
@@ -187,7 +244,7 @@
           <li>Live Demo: <a href="#">Link</a></li>
         </ul>
       </div>
-      <div class="mb-3" style="border-bottom: 2px solid #333">
+      <div class="cv-card">
         <div class="project-title">
           Công ty CP TopCV <span class="float-end">2017 - 2019</span>
         </div>
