@@ -76,7 +76,7 @@
           class="row align-items-center justify-content-center flex-lg-row flex-column-reverse"
         >
           <div
-            class="col-lg-6 hero-content text-center text-lg-start d-flex flex-column justify-content-center"
+            class="col-lg-6 d-flex flex-column justify-content-center align-items-center hero-content text-center text-lg-start"
           >
             <h1 class="fw-bold mb-2" style="font-size: 2.7rem">
               Hi, I'm <span class="highlight">Công Vinh</span>
@@ -97,26 +97,99 @@
             </div>
           </div>
           <div
-            class="col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0"
+            class="col-lg-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-lg-0"
           >
-            <div class="avatar-border-anim mb-3" style="position: relative">
-              <div class="avatar-border"></div>
-              <img
-                src="./assets/images/myAvy.jpg"
-                alt="Avatar"
-                class="avatar-img"
-                style="
-                  width: 180px;
-                  height: 180px;
-                  border-radius: 50%;
-                  object-fit: cover;
-                  position: relative;
-                  z-index: 2;
-                  border: 6px solid #fff;
-                  box-shadow: 0 4px 32px #2563eb33;
-                "
-              />
+            <div class="hero-code-card mb-3">
+              <div class="hero-code-header d-flex justify-content-between align-items-center px-3 py-2">
+                <span class="hero-code-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </span>
+                <span class="hero-code-title">developer.js</span>
+              </div>
+              <pre class="hero-code-content px-4 py-3 mb-0"><code class="language-js" style="font-size:1rem;color:#e5e7eb;background:transparent;">
+<span style="color:#7dd3fc;">const</span> <span style="color:#f472b6;">developer</span> = &#123;
+  <span style="color:#facc15;">name</span>: <span style="color:#a3e635;">'Phạm Công Vinh'</span>,
+  <span style="color:#facc15;">role</span>: <span style="color:#a3e635;">'Frontend Developer'</span>,
+  <span style="color:#facc15;">experience</span>: <span style="color:#a3e635;">10</span>,
+  <span style="color:#facc15;">skills</span>: [<span style="color:#a3e635;">'React'</span>, <span style="color:#a3e635;">'TypeScript'</span>, <span style="color:#a3e635;">'Node.js'</span>],
+  <span style="color:#facc15;">passion</span>: <span style="color:#a3e635;">'Creating amazing UX'</span>
+&#125;;
+</code></pre>
             </div>
+      <style>
+        .hero-code-card {
+          background: #18181b;
+          border-radius: 18px;
+          box-shadow: 0 8px 32px #2563eb22;
+          /* width: 320px; */
+          max-width: 100%;
+          border: 1.5px solid #222;
+          animation: fadeInUp 1s;
+        }
+        .hero-code-header {
+          background: #23272f;
+          border-bottom: 1px solid #222;
+          border-top-left-radius: 18px;
+          border-top-right-radius: 18px;
+        }
+        .hero-code-dots {
+          display: flex;
+          gap: 5px;
+        }
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .dot-red {
+          background: #ef4444;
+        }
+        .dot-yellow {
+          background: #facc15;
+        }
+        .dot-green {
+          background: #22c55e;
+        }
+        .hero-code-title {
+          color: #a1a1aa;
+          font-size: 0.95rem;
+          font-weight: 500;
+        }
+        .hero-code-content {
+          background: #18181b;
+          color: #e5e7eb;
+          font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+          border-bottom-left-radius: 18px;
+          border-bottom-right-radius: 18px;
+          min-height: 180px;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
+        @media (max-width: 991px) {
+          .hero-code-card {
+            width: 220px;
+          }
+          .hero-code-content {
+            font-size: 0.85rem;
+            min-height: 120px;
+          }
+        }
+        @media (max-width: 991px) {
+          .hero-content, .hero-code-card {
+            width: 100% !important;
+            margin: 0 auto;
+          }
+        }
+        @media (max-width: 767px) {
+          .hero-content, .hero-code-card {
+            width: 100% !important;
+            margin: 0 auto;
+          }
+        }
+      </style>
           </div>
         </div>
       </div>
