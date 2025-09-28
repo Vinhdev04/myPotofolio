@@ -45,3 +45,40 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           type();
         });
+
+  
+   document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(() => {
+    const swiper = new Swiper('.my-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // Navigation removed for loop mode only
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  }, 100); // trì hoãn 100ms để đảm bảo DOM load xong
+});
+
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".custom-navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
